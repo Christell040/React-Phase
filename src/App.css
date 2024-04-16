@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.App {
+  font-family: 'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #282c34;
+  width: 100vw; /* Width equal to the full viewport width */
+  height: 100vh; /* Height equal to the full viewport height */
+  position: fixed; /* Fixed positioning to cover the whole screen */
+  top: 0; /* Start from the top */
+  left: 0;
+  text-align: center;
+}
+
+header{
+  color: white;
+  font-size: 30px;
+}
+
+.Task-entry input {
+  border-radius: 40px;
+  width: 25vw;
+  height: 30px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  font-size: 15px;
+}
+.Task-entry button {
+  border-radius: 20px;
+  width: 60px;
+  height: 40px;
+  padding: 2px;
+  border: none;
+  margin: 5px;
+  font-size: 15px;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+.Task-entry button:hover {
+  border-radius: 20px;
+  width: 60px;
+  height: 40px;
+  padding: 2px;
+  border: none;
+  margin: 5px;
+  font-size: 15px;
+  background-color: rgb(4, 188, 221);
+  color: white;
+  
+}
+
+.list-area{
+  background-color: #3a3a3a;
+  color: white;
+  padding: 10px;
+  width: 30vw;
+  margin: 0 auto;
+  list-style: none;
+  margin-top: 20px;
+  text-align: start;
+}
+
+.list-items{
+  padding: 20px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.del{
+  border-radius: 15px;
+  padding: 8px;
+  color: white;
+  background-color: rgb(247, 141, 2);
+  border: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit{
+  margin: 10px;
+  background: rgb(4, 188, 221);
+  border-radius: 15px;
+  width: 50px;
+  padding: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+  animation: 0.5s;
+}
+
+.del:hover{
+  border-radius: 15px;
+  padding: 8px;
+  color: white;
+  background-color: rgb(247, 71, 2);
+  border: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+  animation: 0.5s;
+}
+
+
+
+.edit-mode-button{
+  padding: 10px;
+  width: 50px;
+  border-radius: 20px;
+}
