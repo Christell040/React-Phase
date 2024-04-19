@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import './components/stylez.css';
+import NoteList from './components/NoteList';
+import Navbar from './components/Navbar';
+import { useDispatch, useSelector } from 'react-redux';
+import { addNote, deleteNote, editNote } from './redux/actions/noteActions';
 
 function App() {
+  const notes = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  const handleAddNote = (text) => {
+    dispatch(addNote(text));
+  };
+
+  const handleDelete = (id) => {
+    dispatch(deleteNote(id));
+  };
+
+  const handleEdit = (id, newContent) => {
+    dispatch(editNote(id, newContent));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <NoteList
+        notes={notes}
+        handleAddNote={handleAddNote}
+        handleDelete={handleDelete}
+        handleEdit={handleEdit}
+      />
     </div>
   );
 }

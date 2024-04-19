@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+    font-family: "Manrope", sans-serif;
+    background-color: #fafafa;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.075);
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.nav_list {
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Base styles */
+.card {
+    background-color: rgb(19, 19, 26);
+    width: 100%; /* Adjusted to 100% to fit the grid column */
+    height: 16rem;
+    border-radius: 0.5rem;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+    color: white;
+}
+
+.flex-container {
+    display: flex;
+    padding: 0.5rem;
+    gap: 0.25rem;
+    justify-content: space-between;
+}
+
+/* Dot styles */
+.dot, .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue-dot {
+    background-color: #3b82f6;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.purple-dot {
+    background-color: #a855f7;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+.purple-dot:hover {
+    background-color: #d9d0e2;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pink-dot {
+    background-color: #ec4899;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 100%;
+    /* Specify the transition property and duration */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pink-dot:hover {
+    background-color: #e01631;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+
+.bundle {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* NoteList grid styles */
+.notelist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 32px; /* Adjust this value as needed */
+    /* padding: 16px; */
+    margin: 20px;
+}
+.note-new{
+    background-color: royalblue;
+    width: 100%; /* Adjusted to 100% to fit the grid column */
+    height: 16rem;
+    border-radius: 0.5rem;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    ::placeholder {
+        color: #ffffff; /* Set the placeholder text color to white */
+    }
+
+    
+}
+
+textarea{
+    border: none;
+    resize: none;
+    background-color: rgb(54, 88, 190);
+    color: white;
+    margin-bottom: 5px;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+.note-footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+button {
+    font-family: inherit;
+    font-size: 10px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+    margin-top: 3px;
+  }
+  
+  button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  button:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+  
+  button:hover span {
+    transform: translateX(5em);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+  
+  .container{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
